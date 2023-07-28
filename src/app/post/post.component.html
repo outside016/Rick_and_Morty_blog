@@ -1,0 +1,50 @@
+<div class="post-container">
+  <a class="post-back" [routerLink]='[""]'><img class="icon-post" src="{{cardsService.imageSrc}}"
+                                                alt="{{cardsService.imageAlt}}"/>Вернуться </a>
+
+  <p class="card-title">
+    <span *ngIf="card?.name"> {{card?.name}}</span>
+    <span *ngIf="!card?.name">unknown</span>
+  </p>
+  </div>
+  <div class="card__main">
+    <table class="post-table">
+      <tr class="post-table-1">
+        <td class="card-text t">Статус</td>
+        <td class="card-text card-text-id">
+          <span *ngIf="card?.status"> {{card?.status}}</span>
+          <span *ngIf="!card?.status">unknown</span>
+        </td>
+        <td class="card-text">Тип</td>
+        <td class="card-text card-text-id">
+          <span *ngIf="card?.species"> {{card?.species}}</span>
+          <span *ngIf="!card?.species">unknown</span>
+        </td>
+      </tr>
+      <tr class="post-table-2">
+        <td class="card-text">Разновидность</td>
+        <td class="card-text card-text-id">
+          <span *ngIf="card?.type"> {{card?.type}}</span>
+          <span *ngIf="!card?.type">unknown</span>
+        </td>
+        <td class="card-text">Место рождения</td>
+        <td class="card-text card-text-id">
+          <span *ngIf="card?.origin!.name"> {{card?.origin!.name}}</span>
+          <span *ngIf="!card?.origin!.name">unknown</span>
+        </td>
+      </tr>
+      <tr class="post-table-3">
+        <td class="card-text">Пол</td>
+        <td class="card-text card-text-id">
+          <span *ngIf="card?.gender"> {{card?.gender}}</span>
+          <span *ngIf="!card?.gender">unknown</span>
+        </td>
+        <td class="card-text">Локация</td>
+        <td class="card-text card-text-id">
+          <span *ngIf="card?.location!.name"> {{card?.location!.name}}</span>
+          <span *ngIf="!card?.location!.name">unknown</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+

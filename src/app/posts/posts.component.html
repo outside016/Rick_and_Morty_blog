@@ -1,0 +1,53 @@
+<div class="display">
+    <div class="container">
+        <h1 class="header">Персонажи мультсериала «Рик и Морти»</h1>
+
+        <div class="posts">
+
+            <div class="card" *ngFor="let card of cardsService.cards">
+                <div class="card__title">
+                    <p class="card__title-text">{{card.name}}</p>
+                    <a class="icon" [routerLink]='["/posts", card.id]'><img src="{{cardsService.imageSrc}}"
+                                                                            alt="{{cardsService.imageAlt}}"/></a>
+                </div>
+                <div class="card__main">
+                    <p class="card__main-title">Пол <a class="card__main-text">{{card.gender}}</a></p>
+                    <p class="card__main-title">Тип <a class="card__main-text">{{card.species}}</a></p>
+                </div>
+                <hr>
+            </div>
+            <div class="pagination">
+                <a href="#" > <img class="icon-pagination" src="{{cardsService.imageSrc2}}"
+                        alt="{{cardsService.imageAlt2}}"/></a>
+                <p>{{page}}</p>
+                <a href="#"><img src="{{cardsService.imageSrc2}}"
+                        alt="{{cardsService.imageAlt2}}"/></a>
+
+            </div>
+        </div>
+    </div>
+    <div class="filter">
+        <div class="filter__main">
+            <p class="filter__main-title">Фильтры</p>
+            <div class="input-block">
+                <input id="input_name" class="filter__main-name" required><label for="input_name" class="filter__label">Имя</label>
+            </div>
+            <div class="input-block">
+                <input id="input_type" class="filter__main-name" required><label for="input_type" class="filter__label">Тип</label>
+            </div>
+            <div class="filter__main-radio filter-text">
+                <p class="filter-text-bold">Пол</p>
+
+                <span class="filter__main-radio-el"><input name="port" id="radio1" type="radio"><label for="radio1"
+                                                                                                       class="filter__main-radio-el__text">Male</label></span>
+
+                <span class="filter__main-radio-el"><input name="port" id="radio2" type="radio"><label for="radio2"
+                                                                                                       class="filter__main-radio-el__text">Female</label></span>
+
+                <span class="filter__main-radio-el"><input name="port" id="radio3" type="radio"><label for="radio3"
+                                                                                                       class="filter__main-radio-el__text">unknown</label></span>
+
+            </div>
+        </div>
+    </div>
+</div>
