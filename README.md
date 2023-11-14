@@ -1,4 +1,3 @@
 # Rick_and_Morty_blog
 
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+https://outside016.github.io/Rick_and_Morty_blog/
